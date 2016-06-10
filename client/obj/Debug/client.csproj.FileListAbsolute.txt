@@ -1,0 +1,6 @@
+c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\client\bin\Debug\client.exe.config
+c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\client\bin\Debug\client.exe
+c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\client\bin\Debug\client.pdb
+c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\client\obj\Debug\client.exe
+c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\client\obj\Debug\client.pdb
