@@ -129,6 +129,7 @@
     <Content Include="scripts\knockout-3.4.0.debug.js" />
     <Content Include="scripts\knockout-3.4.0.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="scripts\myScripts\viewModel.js" />
     <None Include="Service References\ProductService\ProductService.disco" />
     <None Include="Service References\ProductService\configuration91.svcinfo" />
     <None Include="Service References\ProductService\configuration.svcinfo" />
@@ -136,7 +137,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="scripts\myScripts\viewModel.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>

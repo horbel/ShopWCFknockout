@@ -132,11 +132,11 @@ namespace WebUI.ProductService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
         System.Threading.Tasks.Task<WebUI.ProductService.Product[]> GetAllProductsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetName", ReplyAction="http://tempuri.org/IProductService/GetNameResponse")]
-        string GetName(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProduct", ReplyAction="http://tempuri.org/IProductService/GetProductResponse")]
+        WebUI.ProductService.Product GetProduct(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetName", ReplyAction="http://tempuri.org/IProductService/GetNameResponse")]
-        System.Threading.Tasks.Task<string> GetNameAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProduct", ReplyAction="http://tempuri.org/IProductService/GetProductResponse")]
+        System.Threading.Tasks.Task<WebUI.ProductService.Product> GetProductAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -174,12 +174,12 @@ namespace WebUI.ProductService {
             return base.Channel.GetAllProductsAsync();
         }
         
-        public string GetName(int id) {
-            return base.Channel.GetName(id);
+        public WebUI.ProductService.Product GetProduct(int id) {
+            return base.Channel.GetProduct(id);
         }
         
-        public System.Threading.Tasks.Task<string> GetNameAsync(int id) {
-            return base.Channel.GetNameAsync(id);
+        public System.Threading.Tasks.Task<WebUI.ProductService.Product> GetProductAsync(int id) {
+            return base.Channel.GetProductAsync(id);
         }
     }
 }

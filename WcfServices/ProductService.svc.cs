@@ -18,9 +18,9 @@ namespace WcfServices
         {            
             return db.Products.ToList();            
         }
-        public string GetName(int id)
+        public Product GetProduct(int id)
         {
-            return db.Products.FirstOrDefault(x => x.Id == id).Name;
+            return db.Products.FirstOrDefault(x => x.Id == id);
         }
     }
 }

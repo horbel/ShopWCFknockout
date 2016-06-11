@@ -15,6 +15,6 @@ namespace WcfServices
         [OperationContract]
         List<Product> GetAllProducts();
         [OperationContract]
-        string GetName(int id);
+        Product GetProduct(int id);
     }
 }

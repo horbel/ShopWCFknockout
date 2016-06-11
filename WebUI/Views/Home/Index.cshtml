@@ -13,7 +13,7 @@
         <script src="~/Scripts/CartScripts/cartHandler.js"></script>*@
 </head>
 <body>
-    <div id="top-line"></div>
+    @*<div id="top-line"></div>*@
 
     <div id="header">
         <a href="#" id="logo"></a>
@@ -48,10 +48,11 @@
         <h2 class="content-title">Доступные товары</h2>
         <ul class="product-list" data-bind="foreach:products">
             <li>
-                <div class="product-title" data-bind="text: Name">
+                <div class="product-title" data-bind="text: Name,  attr: { 'data-id': Id }">
                 </div>
-                <img data-bind="attr:{src:PictureUrl}" class="product-img" />
+                <img data-bind="attr:{src:PictureUrl, 'data-id': Id }" class="product-img" />
                 <div class="product-price" >ЦЕНА: <span data-bind="text:Price "></span>$</div>
+                <div class="to-cart">В Корзину</div>
             </li>
         </ul>
     </div>
