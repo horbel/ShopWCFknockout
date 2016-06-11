@@ -1,0 +1,170 @@
+﻿body{
+    background:#e6e4e4;
+    font-family: Tahoma;
+    font-size: 14px;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration:none;
+}
+#top-line{
+    background: #323030;
+    height:5px;
+}
+#header{
+    width:940px;
+    height:95px;
+    margin:0 auto;
+    border: 1px #7E7B7B solid;
+    border-radius:5px;
+}
+#logo{
+    background: url(images/shopLogo.png) no-repeat;
+    background-size: 100% 100%;
+    
+    width:263px;
+    height: 95px;
+    display:block;
+    float:left;
+}
+#call {
+    font-size: 30px;
+    color: #7E7B7B;
+    float: left;
+    font-family: Arial;
+    width: 265px;
+    height: 85px;
+    text-align: center;
+    padding-top: 10px;
+   
+}
+    
+    
+#top-menu{
+    width:412px;    
+    height:33px;
+    display:table-cell;
+    vertical-align:middle;
+    background: #323030;
+    background: linear-gradient(-90deg, #323030 10%, #534f4f 80%);
+    border-radius: 0 0 3px 3px;
+    box-sizing:border-box;
+    padding:0 20px;
+}
+#top-menu span{
+    color:white;
+    margin:0 6px;
+    cursor:pointer;
+}
+#top-menu span:hover{
+    text-decoration:underline;
+}
+.top-menu-line{
+    display:inline-block;
+    width:1px;
+    height:16px;
+    background:#5c5757;
+    margin-bottom:-3px;
+}
+/*SEARCH!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#search{
+    width:245px;
+    height: 38px;
+    float:left;
+    background: white;
+    border: 2px solid #b4b2b2;    
+    border-radius:5px;
+    margin-top:10px;
+    box-sizing:border-box;
+}
+#search-form input[type=text]{
+    width:205px;
+    float:left;
+    height:23px;
+    margin:5px 0 0 0;
+    padding-left:5px;
+    color:#010101;
+    border: none;
+}
+#search-button{
+    width:30px;
+    height:23px;   
+    color:#010101;
+    background: url(images/search.png) center left no-repeat;
+    background-size:contain;
+    margin-top:6px;
+    border:none;    
+}
+#search-button:hover{
+    cursor:pointer;    
+}
+.search-title{
+    padding:0 0 0 15px;
+    font-size:20px;
+    margin-bottom:15px;
+    color:#ffffff;
+    display:block;
+    text-align:left;  
+    float:left;  
+    font-weight:bold;
+    background: #323030;
+    width:400px;
+    border-radius:10px;
+}
+/*CART!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+#сart-button{
+    background:url(images/toCart.png) center left no-repeat;
+    background-size:100% 100%;
+    display:block;
+    width: 155px;
+    height:33px;
+    float:left;
+    margin-top:10px;
+    margin-left:11px;
+    padding-top:5px;
+    text-align:center;
+    font-size: 18px;    
+    color: #ffffff;
+}
+
+
+/*CONTENT!!!!!!!!!!*/
+#content{  
+    padding:21px 0;
+    margin-top:3px;     
+    background: #ffffff;
+    width:940px;
+    height:200px;
+    margin-left:auto;
+    margin-right:auto;
+    display:table;
+    box-shadow: 0px 5px 15px #423f3f;
+    
+}
+.content-title{
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+/*product container*/
+.product-img{
+    width:200px;
+    height:200px;
+}
+.product-list li{
+    display:inline-block;
+    list-style-type: none;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-bottom:20px;
+}
+.product-title{
+    text-align:center;
+}
+.product-price{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:red;
+}

@@ -15,8 +15,7 @@ namespace WcfServices
         ProductContext db = new ProductContext();
 
         public List<Product> GetAllProducts()
-        {
-            Console.WriteLine(db.Products.FirstOrDefault(x => x.Id == 1).Name);
+        {            
             return db.Products.ToList();            
         }
         public string GetName(int id)

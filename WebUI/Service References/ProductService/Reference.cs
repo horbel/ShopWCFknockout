@@ -34,6 +34,9 @@ namespace WebUI.ProductService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PictureUrlField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -92,6 +95,19 @@ namespace WebUI.ProductService {
                 if ((object.ReferenceEquals(this.PictureUrlField, value) != true)) {
                     this.PictureUrlField = value;
                     this.RaisePropertyChanged("PictureUrl");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
                 }
             }
         }

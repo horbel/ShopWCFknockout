@@ -14,7 +14,7 @@ namespace WebUI.Controllers
             return View();
         }
         public JsonResult GetAllProducts()
-        {
+        {            
             var products = client.GetAllProducts();
             return Json(products, JsonRequestBehavior.AllowGet);
         }

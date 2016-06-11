@@ -126,6 +126,9 @@
     <Content Include="scripts\jquery-2.2.3.js" />
     <Content Include="scripts\jquery-2.2.3.min.js" />
     <Content Include="scripts\jquery-2.2.3.min.map" />
+    <Content Include="scripts\knockout-3.4.0.debug.js" />
+    <Content Include="scripts\knockout-3.4.0.js" />
+    <Content Include="Content\Site.css" />
     <None Include="Service References\ProductService\ProductService.disco" />
     <None Include="Service References\ProductService\configuration91.svcinfo" />
     <None Include="Service References\ProductService\configuration.svcinfo" />
@@ -133,19 +136,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="scripts\knockout-3.4.0.debug.js" />
-    <Content Include="scripts\knockout-3.4.0.js" />
+    <Content Include="scripts\myScripts\viewModel.js" />
     <Content Include="Web.config" />
-    <None Include="Service References\ProductService\ProductService.wsdl" />
-    <None Include="Service References\ProductService\ProductService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ProductService\ProductService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Service References\ProductService\WebUI.ProductService.Product.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -167,9 +159,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Service References\ProductService\ProductService.wsdl" />
     <None Include="Service References\ProductService\ProductService.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ProductService\ProductService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductService\ProductService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ProductService\WebUI.ProductService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -179,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

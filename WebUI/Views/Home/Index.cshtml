@@ -1,35 +1,65 @@
-﻿
-@{
+﻿@{
+    //Layout = "~/Views/Shared/_Main.cshtml";
     Layout = null;
 }
-
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html>
 <head>
+    <link rel="stylesheet" href="~/Content/Site.css" type="text/css" />
     <script src="~/scripts/jquery-2.2.3.min.js"></script>
     <script src="~/scripts/knockout-3.4.0.js"></script>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    @*<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+        <script src="~/Scripts/IndexScripts/productHandler.js"></script>
+        <script src="~/Scripts/CartScripts/cartHandler.js"></script>*@
 </head>
 <body>
-    <div> 
-        <button id="btn">Get All Products
-        </button>
-        <ul data-bind="foreach: products">
-            <li data-bind="text: Name"></li>
-        </ul>
+    <div id="top-line"></div>
 
+    <div id="header">
+        <a href="#" id="logo"></a>
 
+        <div id="call">
+            Звоните +375291305607
+        </div>
+
+        <div id="top-menu">
+            <span id="main-link">Главная</span>
+            <div class="top-menu-line"></div>
+            <span id="delivery-link">Доствка</span>
+            <div class="top-menu-line"></div>
+            <span id="news-link">Новости</span>
+            <div class="top-menu-line"></div>
+            <span id="comments-link">Отзывы</span>
+            <div class="top-menu-line"></div>
+            <span id="cart-link">Корзина</span>
+        </div>
+
+        <div id="search">
+            <div id="search-form">
+                <input type="text" id="search-text" name="" placeholder="Поиск" value="" />
+                <button id="search-button"></button>
+                @*<button id="search-button"></button>*@
+            </div>
+        </div>
+        <a href="#" id="сart-button">Пусто</a>
     </div>
+
+    <div id="content">
+        <h2 class="content-title">Доступные товары</h2>
+        <ul class="product-list" data-bind="foreach:products">
+            <li>
+                <div class="product-title" data-bind="text: Name">
+                </div>
+                <img data-bind="attr:{src:PictureUrl}" class="product-img" />
+                <div class="product-price" >ЦЕНА: <span data-bind="text:Price "></span>$</div>
+            </li>
+        </ul>
+    </div>
+   
 </body>
 </html>
-<script>
-    products = new Object();
-    $("#btn").click(function () {
-        $.getJSON('Home/GetAllProducts', function (data) {
-            products = data;
-            ko.applyBindings(products);
-        })
-    })
-</script>
+
+
+
+<script src="~/scripts/myScripts/viewModel.js"></script>
+

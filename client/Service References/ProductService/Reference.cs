@@ -31,6 +31,9 @@ namespace client.ProductService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PictureUrlField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -76,6 +79,19 @@ namespace client.ProductService {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PictureUrl {
+            get {
+                return this.PictureUrlField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PictureUrlField, value) != true)) {
+                    this.PictureUrlField = value;
+                    this.RaisePropertyChanged("PictureUrl");
                 }
             }
         }
