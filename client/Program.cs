@@ -11,8 +11,8 @@ namespace client
         static void Main(string[] args)
         {
             ProductService.ProductServiceClient client = new ProductService.ProductServiceClient();
-            string p = client.GetName(1);
-            Console.WriteLine(p);
+            //string p = client.GetProduct(1);
+            //Console.WriteLine(p);
         }
     }
 }

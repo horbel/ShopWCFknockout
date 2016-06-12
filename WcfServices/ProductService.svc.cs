@@ -10,7 +10,7 @@ namespace WcfServices
 {
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "ProductService" в коде, SVC-файле и файле конфигурации.
     // ПРИМЕЧАНИЕ. Чтобы запустить клиент проверки WCF для тестирования службы, выберите элементы ProductService.svc или ProductService.svc.cs в обозревателе решений и начните отладку.
-    public class ProductService : IProductService
+    public class ProductService : IProductService //localhost:55269/Properties/
     {
         ProductContext db = new ProductContext();
 

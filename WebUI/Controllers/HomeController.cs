@@ -20,8 +20,7 @@ namespace WebUI.Controllers
         }
         [HttpGet]
         public JsonResult GetProduct(int id)
-        {
-            
+        {            
             var product = client.GetProduct(id);
             return Json(product, JsonRequestBehavior.AllowGet);
         }

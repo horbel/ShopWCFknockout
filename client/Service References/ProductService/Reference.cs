@@ -34,6 +34,9 @@ namespace client.ProductService {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PictureUrlField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal PriceField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -96,6 +99,19 @@ namespace client.ProductService {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public decimal Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -116,11 +132,11 @@ namespace client.ProductService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
         System.Threading.Tasks.Task<client.ProductService.Product[]> GetAllProductsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetName", ReplyAction="http://tempuri.org/IProductService/GetNameResponse")]
-        string GetName(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProduct", ReplyAction="http://tempuri.org/IProductService/GetProductResponse")]
+        client.ProductService.Product GetProduct(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetName", ReplyAction="http://tempuri.org/IProductService/GetNameResponse")]
-        System.Threading.Tasks.Task<string> GetNameAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProduct", ReplyAction="http://tempuri.org/IProductService/GetProductResponse")]
+        System.Threading.Tasks.Task<client.ProductService.Product> GetProductAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -158,12 +174,12 @@ namespace client.ProductService {
             return base.Channel.GetAllProductsAsync();
         }
         
-        public string GetName(int id) {
-            return base.Channel.GetName(id);
+        public client.ProductService.Product GetProduct(int id) {
+            return base.Channel.GetProduct(id);
         }
         
-        public System.Threading.Tasks.Task<string> GetNameAsync(int id) {
-            return base.Channel.GetNameAsync(id);
+        public System.Threading.Tasks.Task<client.ProductService.Product> GetProductAsync(int id) {
+            return base.Channel.GetProductAsync(id);
         }
     }
 }
