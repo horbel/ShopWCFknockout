@@ -1,0 +1,10 @@
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\DataLayer\obj\Debug\DataLayer.pdb

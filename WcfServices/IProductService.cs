@@ -4,7 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using WcfServices.Model;
+//using WcfServices.Model;
+using DataLayer.Entities;
 
 namespace WcfServices
 {

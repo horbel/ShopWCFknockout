@@ -4,7 +4,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using WcfServices.Model;
+//using WcfServices.Model;
+using DataLayer.Concrete;
+using DataLayer.Entities;
 
 namespace WcfServices
 {
@@ -12,15 +14,17 @@ namespace WcfServices
     // ПРИМЕЧАНИЕ. Чтобы запустить клиент проверки WCF для тестирования службы, выберите элементы ProductService.svc или ProductService.svc.cs в обозревателе решений и начните отладку.
     public class ProductService : IProductService //localhost:55269/Properties/
     {
-        ProductContext db = new ProductContext();
-
+        ProductRepository repository = new ProductRepository();
+        //ProductContext db = new ProductContext();
+        [OperationBehavior]
         public List<Product> GetAllProducts()
-        {            
-            return db.Products.ToList();            
+        {
+            return repository.Products.ToList();          
         }
+        [OperationBehavior]
         public Product GetProduct(int id)
         {
-            return db.Products.FirstOrDefault(x => x.Id == id);
+            return repository.Products.FirstOrDefault(x => x.Id == id);
         }
     }
 }

@@ -50,3 +50,7 @@ c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\
 c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
 c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\obj\Debug\WebUI.dll
 c:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\obj\Debug\WebUI.pdb
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.xml
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.SqlServer.xml

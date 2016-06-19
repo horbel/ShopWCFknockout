@@ -48,6 +48,7 @@ var ViewModel = function () {
         $.getJSON('Home/GetAllProducts', function (data) {
             self.products = data;
             ko.applyBindings(self);
+            
         })
     }
     this.init();

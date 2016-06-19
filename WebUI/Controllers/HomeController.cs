@@ -24,5 +24,12 @@ namespace WebUI.Controllers
             var product = client.GetProduct(id);
             return Json(product, JsonRequestBehavior.AllowGet);
         }
+
+
+        public ActionResult test()
+        {
+            var obj = client.GetProduct(1);
+            return View(obj);
+        }
     }
 }
