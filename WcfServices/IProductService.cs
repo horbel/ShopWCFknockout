@@ -17,5 +17,9 @@ namespace WcfServices
         List<Product> GetAllProducts();
         [OperationContract]
         Product GetProduct(int id);
+        [OperationContract]
+        Product SaveProduct(Product product);
+        [OperationContract]
+        Product DeleteProduct(int productID);
     }
 }

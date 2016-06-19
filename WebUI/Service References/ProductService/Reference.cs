@@ -9,134 +9,35 @@
 //------------------------------------------------------------------------------
 
 namespace WebUI.ProductService {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Product", Namespace="http://schemas.datacontract.org/2004/07/DataLayer.Entities")]
-    [System.SerializableAttribute()]
-    public partial class Product : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DescriptionField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PictureUrlField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PriceField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description {
-            get {
-                return this.DescriptionField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
-                    this.DescriptionField = value;
-                    this.RaisePropertyChanged("Description");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PictureUrl {
-            get {
-                return this.PictureUrlField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PictureUrlField, value) != true)) {
-                    this.PictureUrlField = value;
-                    this.RaisePropertyChanged("PictureUrl");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Price {
-            get {
-                return this.PriceField;
-            }
-            set {
-                if ((this.PriceField.Equals(value) != true)) {
-                    this.PriceField = value;
-                    this.RaisePropertyChanged("Price");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ProductService.IProductService")]
     public interface IProductService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
-        WebUI.ProductService.Product[] GetAllProducts();
+        DataLayer.Entities.Product[] GetAllProducts();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetAllProducts", ReplyAction="http://tempuri.org/IProductService/GetAllProductsResponse")]
-        System.Threading.Tasks.Task<WebUI.ProductService.Product[]> GetAllProductsAsync();
+        System.Threading.Tasks.Task<DataLayer.Entities.Product[]> GetAllProductsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProduct", ReplyAction="http://tempuri.org/IProductService/GetProductResponse")]
-        WebUI.ProductService.Product GetProduct(int id);
+        DataLayer.Entities.Product GetProduct(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/GetProduct", ReplyAction="http://tempuri.org/IProductService/GetProductResponse")]
-        System.Threading.Tasks.Task<WebUI.ProductService.Product> GetProductAsync(int id);
+        System.Threading.Tasks.Task<DataLayer.Entities.Product> GetProductAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/SaveProduct", ReplyAction="http://tempuri.org/IProductService/SaveProductResponse")]
+        DataLayer.Entities.Product SaveProduct(DataLayer.Entities.Product product);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/SaveProduct", ReplyAction="http://tempuri.org/IProductService/SaveProductResponse")]
+        System.Threading.Tasks.Task<DataLayer.Entities.Product> SaveProductAsync(DataLayer.Entities.Product product);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/DeleteProduct", ReplyAction="http://tempuri.org/IProductService/DeleteProductResponse")]
+        DataLayer.Entities.Product DeleteProduct(int productID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/DeleteProduct", ReplyAction="http://tempuri.org/IProductService/DeleteProductResponse")]
+        System.Threading.Tasks.Task<DataLayer.Entities.Product> DeleteProductAsync(int productID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -166,20 +67,36 @@ namespace WebUI.ProductService {
                 base(binding, remoteAddress) {
         }
         
-        public WebUI.ProductService.Product[] GetAllProducts() {
+        public DataLayer.Entities.Product[] GetAllProducts() {
             return base.Channel.GetAllProducts();
         }
         
-        public System.Threading.Tasks.Task<WebUI.ProductService.Product[]> GetAllProductsAsync() {
+        public System.Threading.Tasks.Task<DataLayer.Entities.Product[]> GetAllProductsAsync() {
             return base.Channel.GetAllProductsAsync();
         }
         
-        public WebUI.ProductService.Product GetProduct(int id) {
+        public DataLayer.Entities.Product GetProduct(int id) {
             return base.Channel.GetProduct(id);
         }
         
-        public System.Threading.Tasks.Task<WebUI.ProductService.Product> GetProductAsync(int id) {
+        public System.Threading.Tasks.Task<DataLayer.Entities.Product> GetProductAsync(int id) {
             return base.Channel.GetProductAsync(id);
+        }
+        
+        public DataLayer.Entities.Product SaveProduct(DataLayer.Entities.Product product) {
+            return base.Channel.SaveProduct(product);
+        }
+        
+        public System.Threading.Tasks.Task<DataLayer.Entities.Product> SaveProductAsync(DataLayer.Entities.Product product) {
+            return base.Channel.SaveProductAsync(product);
+        }
+        
+        public DataLayer.Entities.Product DeleteProduct(int productID) {
+            return base.Channel.DeleteProduct(productID);
+        }
+        
+        public System.Threading.Tasks.Task<DataLayer.Entities.Product> DeleteProductAsync(int productID) {
+            return base.Channel.DeleteProductAsync(productID);
         }
     }
 }

@@ -27,4 +27,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SaveProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataLayer.Entities" minOccurs="0" name="product" nillable="true" type="q3:Product" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataLayer.Entities" minOccurs="0" name="SaveProductResult" nillable="true" type="q4:Product" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProduct">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProductResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataLayer.Entities" minOccurs="0" name="DeleteProductResult" nillable="true" type="q5:Product" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

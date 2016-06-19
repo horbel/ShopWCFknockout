@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/Admin.css" />
+    <script src="~/scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/scripts/knockout-3.4.0.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    <div id="top-block">
+        Администрирование сайта Online Shop
+    </div>
+    <div id="content">
+        <div id="left-block">
+            <span class="left-menu-title">Доступные таблицы</span>
+            <span id="show-products" class="left-menu-item">Продукты</span>
+ 
+
+        </div>
+
+        <div id="right-block">
+
+            <div id="table-block">
+
+                <h2>Knockout CRUD Operations with MVC4</h2>
+
+                <h3>List of Products</h3>
+
+                <table id="products1" data-bind="visible: Products().length > 0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody data-bind="foreach: Products">
+                        <tr>
+                            <td data-bind="text: Id"></td>
+                            <td data-bind="text: Name"></td>
+                            <td data-bind="text: Description"></td>
+                            <td data-bind="text: Price"></td>
+
+                            <td>
+                                <button data-bind="click: $root.edit">Edit</button>
+                                <button data-bind="click: $root.delete">Delete</button>
+
+                            </td>
+
+                        </tr>
+                    </tbody>                    
+                </table>                
+                <br />
+                <div style="border-top: solid 2px #282828; width: 430px; height: 10px"> </div>
+
+                <div data-bind="if: Product">
+                    <div>
+                        <h2>Update Product</h2>
+                    </div>
+                    <div>
+                        <label for="productId" data-bind="visible: false">ID</label>
+                        <label data-bind="text: Product().Id, visible: false"></label>
+
+                    </div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input data-bind="value: Product().Name" type="text" title="Name" />
+                    </div>
+
+                    <div>
+                        <label for="description">Description</label>
+                        <input data-bind="value: Product().Description" type="text" title="Description" />
+                    </div>
+
+                    <div>
+                        <label for="price">Price</label>
+                        <input data-bind="value: Product().Price" type="text" title="Price" />
+
+                    </div>
+                    <br />
+                    <div>
+                        <button data-bind="click: $root.update">Update</button>
+                        <button data-bind="click: $root.cancel">Cancel</button>
+
+                    </div>
+                </div>
+
+                <div data-bind="ifnot: Product()">
+                    <div>
+                        <h2>Add New Product</h2>
+                    </div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input data-bind="value: $root.Name" type="text" title="Name" />
+                    </div>
+
+                    <div>
+                        <label for="descrition">Description</label>
+                        <input data-bind="value: $root.Description" type="text" title="Description" />
+                    </div>
+
+                    <div>
+                        <label for="price">Price</label>
+                        <input data-bind="value: $root.Price" type="text" title="Price" />
+                    </div>
+                    <br />
+                    <div>
+                        <button data-bind="click: $root.create">Save</button>
+                        <button data-bind="click: $root.reset">Reset</button>
+
+                    </div>
+                </div>
+
+
+            </div>
+            
+           
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="~/scripts/myScripts/AdminModel.js"></script>

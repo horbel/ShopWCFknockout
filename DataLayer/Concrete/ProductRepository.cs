@@ -23,7 +23,7 @@ namespace DataLayer.Concrete
 
         public Product DeleteProduct(int productID)
         {
-            Product dbEntity = context.Products.Find(productID);
+            Product dbEntity = context.Products.FirstOrDefault(x=>x.Id==productID);
             if (dbEntity != null)
             {
                 context.Products.Remove(dbEntity);
@@ -32,7 +32,7 @@ namespace DataLayer.Concrete
             return dbEntity;
         }
         //this method for edit and create new products
-        public void SaveProduct(Product product)
+        public Product SaveProduct(Product product)
         {
             if (product.Id == 0)
             {
@@ -51,6 +51,7 @@ namespace DataLayer.Concrete
 
             }
             context.SaveChanges();
+            return product;
         }
     }
 }

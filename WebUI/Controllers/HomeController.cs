@@ -26,10 +26,6 @@ namespace WebUI.Controllers
         }
 
 
-        public ActionResult test()
-        {
-            var obj = client.GetProduct(1);
-            return View(obj);
-        }
+    
     }
 }

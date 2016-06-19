@@ -127,9 +127,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin.css" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Properties\DataSources\DataLayer.Entities.Product.datasource" />
     <None Include="scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="scripts\jquery-2.2.3.js" />
     <Content Include="scripts\jquery-2.2.3.min.js" />
@@ -137,6 +139,7 @@
     <Content Include="scripts\knockout-3.4.0.debug.js" />
     <Content Include="scripts\knockout-3.4.0.js" />
     <Content Include="Content\Site.css" />
+    <Content Include="scripts\myScripts\AdminModel.js" />
     <Content Include="scripts\myScripts\viewModel.js" />
     <None Include="Service References\ProductService\ProductService.disco" />
     <None Include="Service References\ProductService\configuration91.svcinfo" />
@@ -150,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -167,7 +171,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Home\test.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
     <None Include="Service References\ProductService\ProductService.wsdl" />
     <None Include="Service References\ProductService\ProductService.xsd">
       <SubType>Designer</SubType>
@@ -178,9 +182,6 @@
     <None Include="Service References\ProductService\ProductService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Service References\ProductService\WebUI.ProductService.Product.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -195,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{1e5729cc-6cce-4ccd-9a83-d94d52c779bd}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ProductService\" />

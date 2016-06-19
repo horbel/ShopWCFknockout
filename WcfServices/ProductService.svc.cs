@@ -18,8 +18,8 @@ namespace WcfServices
         public ProductService(IProductRepository repoParam)
         {
             repository = repoParam;
-        }
-       
+        }        
+
         [OperationBehavior]
         public List<Product> GetAllProducts()
         {
@@ -29,6 +29,18 @@ namespace WcfServices
         public Product GetProduct(int id)
         {
             return repository.Products.FirstOrDefault(x => x.Id == id);
+        }
+        [OperationBehavior]
+        public Product SaveProduct(Product product)
+        {
+            repository.SaveProduct(product);
+            return product;
+        }
+        [OperationBehavior]
+        public Product DeleteProduct(int productID)
+        {
+           var delProd = repository.DeleteProduct(productID);
+           return delProd;
         }
     }
 }

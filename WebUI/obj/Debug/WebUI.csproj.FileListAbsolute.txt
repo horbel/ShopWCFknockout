@@ -54,3 +54,5 @@ C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\
 C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.SqlServer.dll
 C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.xml
 C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\DataLayer.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WebUI\bin\DataLayer.pdb
