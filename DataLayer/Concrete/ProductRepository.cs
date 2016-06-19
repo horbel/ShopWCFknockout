@@ -12,6 +12,7 @@ namespace DataLayer.Concrete
     {
        
         private ProductContext context = new ProductContext();
+        
         public IQueryable<Product> Products
         {
             get

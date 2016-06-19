@@ -23,3 +23,7 @@ C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfService
 C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\DataLayer.pdb
 C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\EntityFramework.SqlServer.dll
 C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\EntityFramework.SqlServer.xml
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\Ninject.Extensions.Wcf.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\Ninject.Web.Common.dll
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\Ninject.Extensions.Wcf.xml
+C:\Users\Алексей\documents\visual studio 2015\Projects\ShopWCF\WcfServices\bin\Ninject.Web.Common.xml

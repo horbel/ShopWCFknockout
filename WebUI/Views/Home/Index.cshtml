@@ -46,17 +46,19 @@
 
     <div id="content">
         <h2 class="content-title">Доступные товары</h2>
-        <ul class="product-list" data-bind="foreach:products">
+        <ul class="product-list" data-bind="foreach:Products">
             <li>
-                <div class="product-title" data-bind="text: Name,  attr: { 'data-id': Id }, click: function(){alert($data.Name)}">
+                <div class="product-title" data-bind="text: Name,  attr: { 'data-id': Id }">
                 </div>
                 <img data-bind="attr:{src:PictureUrl, 'data-id': Id }" class="product-img" />
-                <div class="product-price" >ЦЕНА: <span data-bind="text:Price "></span>$</div>
-                <div class="to-cart">В Корзину</div>
+                <div class="product-price">ЦЕНА: <span data-bind="text:Price "></span>$</div>
+                <div class="to-cart">В Корзину</div>   
+                           
             </li>
         </ul>
+        
     </div>
-   
+
 </body>
 </html>
 
