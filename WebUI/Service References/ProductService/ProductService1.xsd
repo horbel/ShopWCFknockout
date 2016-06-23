@@ -51,7 +51,7 @@
   <xs:element name="DeleteProductResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataLayer.Entities" minOccurs="0" name="DeleteProductResult" nillable="true" type="q5:Product" />
+        <xs:element minOccurs="0" name="DeleteProductResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

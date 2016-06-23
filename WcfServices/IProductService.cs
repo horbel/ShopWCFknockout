@@ -20,6 +20,6 @@ namespace WcfServices
         [OperationContract]
         Product SaveProduct(Product product);
         [OperationContract]
-        Product DeleteProduct(int productID);
+        bool DeleteProduct(int productID);
     }
 }

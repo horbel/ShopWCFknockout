@@ -11,6 +11,6 @@ namespace DataLayer.Abstract
     {
         IQueryable<Product> Products { get; }
         Product SaveProduct(Product product);
-        Product DeleteProduct(int productID);
+        bool DeleteProduct(int productID);
     }
 }

@@ -37,10 +37,11 @@ namespace WcfServices
             return product;
         }
         [OperationBehavior]
-        public Product DeleteProduct(int productID)
+        public bool DeleteProduct(int productID)
         {
-           var delProd = repository.DeleteProduct(productID);
-           return delProd;
+            if (repository.DeleteProduct(productID))
+                return true;
+            return false;
         }
     }
 }

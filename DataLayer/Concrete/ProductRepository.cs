@@ -21,15 +21,17 @@ namespace DataLayer.Concrete
             }
         }
 
-        public Product DeleteProduct(int productID)
+        public bool DeleteProduct(int productID)
         {
-            Product dbEntity = context.Products.FirstOrDefault(x=>x.Id==productID);
+            Product dbEntity = context.Products.Find(productID);
             if (dbEntity != null)
             {
                 context.Products.Remove(dbEntity);
                 context.SaveChanges();
+                return true;
             }
-            return dbEntity;
+
+            return false;
         }
         //this method for edit and create new products
         public Product SaveProduct(Product product)

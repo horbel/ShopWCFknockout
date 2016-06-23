@@ -18,7 +18,7 @@
         <div id="left-block">
             <span class="left-menu-title">Доступные таблицы</span>
             <span id="show-products" class="left-menu-item">Продукты</span>
- 
+
 
         </div>
 
@@ -26,9 +26,9 @@
 
             <div id="table-block">
 
-                <h2>Knockout CRUD Operations with MVC4</h2>
 
-                <h3>List of Products</h3>
+
+                <h3>Список всех продуктов</h3>
 
                 <table id="products1" data-bind="visible: Products().length > 0">
                     <thead>
@@ -36,7 +36,7 @@
                             <th>ID</th>
                             <th>Name</th>
                             <th>Description</th>
-                            <th>Price</th>
+                            <th>Price $</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -50,19 +50,20 @@
                             <td>
                                 <button data-bind="click: $root.edit">Edit</button>
                                 <button data-bind="click: $root.delete">Delete</button>
-
                             </td>
 
                         </tr>
-                    </tbody>                    
-                </table>                
+                    </tbody>
+                </table>
                 <br />
-                <div style="border-top: solid 2px #282828; width: 430px; height: 10px"> </div>
+                <div style="border-top: solid 2px #282828; width: 1000px; height: 10px"> </div>
+
 
                 <div data-bind="if: Product">
                     <div>
-                        <h2>Update Product</h2>
+                        <h4>Update Product</h4>
                     </div>
+
                     <div>
                         <label for="productId" data-bind="visible: false">ID</label>
                         <label data-bind="text: Product().Id, visible: false"></label>
@@ -83,6 +84,11 @@
                         <input data-bind="value: Product().Price" type="text" title="Price" />
 
                     </div>
+                    <div>
+                        <label for="picture">Picture URL</label>
+                        <input data-bind="value: Product().PictureUrl" type="text" title="PictureUrl" />
+                        <img data-bind="attr:{src:Product().PictureUrl}" width="200" height="200" />
+                    </div>
                     <br />
                     <div>
                         <button data-bind="click: $root.update">Update</button>
@@ -91,9 +97,11 @@
                     </div>
                 </div>
 
+
+
                 <div data-bind="ifnot: Product()">
                     <div>
-                        <h2>Add New Product</h2>
+                        <h4>Add New Product</h4>
                     </div>
                     <div>
                         <label for="name">Name</label>
@@ -109,6 +117,12 @@
                         <label for="price">Price</label>
                         <input data-bind="value: $root.Price" type="text" title="Price" />
                     </div>
+                    <div>
+                        <label for="picture">Picture URL</label>                        
+                        <input data-bind="value: $root.PictureUrl" type="text" title="PictureUrl" />                       
+                        <img data-bind="attr:{src:$root.PictureUrl}" width="200" height="200" />
+                       
+                    </div>
                     <br />
                     <div>
                         <button data-bind="click: $root.create">Save</button>
@@ -118,10 +132,9 @@
                 </div>
 
 
-            </div>
-            
-           
 
+
+            </div>
         </div>
     </div>
 </body>

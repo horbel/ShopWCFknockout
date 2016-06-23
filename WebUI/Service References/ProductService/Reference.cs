@@ -34,10 +34,10 @@ namespace WebUI.ProductService {
         System.Threading.Tasks.Task<DataLayer.Entities.Product> SaveProductAsync(DataLayer.Entities.Product product);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/DeleteProduct", ReplyAction="http://tempuri.org/IProductService/DeleteProductResponse")]
-        DataLayer.Entities.Product DeleteProduct(int productID);
+        bool DeleteProduct(int productID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductService/DeleteProduct", ReplyAction="http://tempuri.org/IProductService/DeleteProductResponse")]
-        System.Threading.Tasks.Task<DataLayer.Entities.Product> DeleteProductAsync(int productID);
+        System.Threading.Tasks.Task<bool> DeleteProductAsync(int productID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -91,11 +91,11 @@ namespace WebUI.ProductService {
             return base.Channel.SaveProductAsync(product);
         }
         
-        public DataLayer.Entities.Product DeleteProduct(int productID) {
+        public bool DeleteProduct(int productID) {
             return base.Channel.DeleteProduct(productID);
         }
         
-        public System.Threading.Tasks.Task<DataLayer.Entities.Product> DeleteProductAsync(int productID) {
+        public System.Threading.Tasks.Task<bool> DeleteProductAsync(int productID) {
             return base.Channel.DeleteProductAsync(productID);
         }
     }

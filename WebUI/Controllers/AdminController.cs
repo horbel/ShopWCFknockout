@@ -31,12 +31,14 @@ namespace WebUI.Controllers
             return Json(item, JsonRequestBehavior.AllowGet);
         }
         
-        [HttpPost]
+        
         public JsonResult DeleteProduct(int id)
         {
-            var prod = client.DeleteProduct(id);
-            return Json(prod, JsonRequestBehavior.AllowGet);           
-
+            if (client.DeleteProduct(id))
+            {
+                return Json(new { Status = true }, JsonRequestBehavior.AllowGet);
+            }
+            return Json(new { Status = false }, JsonRequestBehavior.AllowGet);
         }
     }
 }

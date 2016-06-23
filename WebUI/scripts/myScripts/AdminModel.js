@@ -7,12 +7,14 @@
     self.Name = ko.observable("");
     self.Price = ko.observable("");
     self.Description = ko.observable("");
+    self.PictureUrl = ko.observable("");
 
     var Product = {
         Id: self.Id,
         Name: self.Name,
         Price: self.Price,
-        Description: self.Description
+        Description: self.Description,
+        PictureUrl: self.PictureUrl
     };
 
     self.Product = ko.observable();
@@ -47,6 +49,7 @@
                     self.Name("");
                     self.Price("");
                     self.Description("");
+                    self.PictureUrl("");
 
                 }
             }).fail(
@@ -61,12 +64,11 @@
 
     }
     // Delete product details
-    self.delete = function (Product) {
-        if (confirm('Are you sure to Delete "' + Product.Name + '" product ??')) {
+    self.delete = function (Product) {        
+        if (confirm('Are you sure to Delete "' + Product.Name + '" product ??')) {           
             var id = Product.Id;
-
             $.ajax({
-                url: 'DeleteProduct',
+                url: 'DeleteProduct/'+id,
                 cache: false,
                 type: 'POST',
                 contentType: 'application/json; charset=utf-8',
@@ -77,7 +79,7 @@
                 }
             }).fail(
             function (xhr, textStatus, err) {
-               
+                alert(id);
             });
         }
     }

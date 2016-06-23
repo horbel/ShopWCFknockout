@@ -101,6 +101,7 @@ label {
  
  table {
  padding-top: 1em;
+ margin:0 auto;
  }
  
  thead, tfoot {
@@ -110,6 +111,10 @@ label {
  th, td {
  padding: .1em .5em;
  text-align: left;
+ }
+ th{
+     border-bottom:1px solid black;
+     text-align: center;
  }
  
  td li, td ul {
@@ -127,4 +132,24 @@ label {
  
  td li:last-child::after {
  content: '';
+ }
+ h3{
+     text-align:center;
+     font-size:22px;
+     text-decoration:underline;         
+ }
+ h4{    
+     margin-left:50px;
+     font-size:20px;
+     font-weight:bold;
+ }
+ input{
+     width:400px; 
+     clear:both;    
+ }
+ label{
+     
+ }
+ img{
+     display:block;
  }
