@@ -23,7 +23,7 @@
     // Initialize the view-model
     self.init = function () {
         $.ajax({
-            url: 'GetAllProducts',
+            url: 'admin/GetAllProducts',
             cache: false,
             type: 'GET',
             contentType: 'application/json; charset=utf-8',
@@ -39,7 +39,7 @@
         if (Product.Name() != "" && Product.Price() != "") {
             self.Product.Id = 0;
             $.ajax({
-                url: 'EditProduct',
+                url: 'admin/EditProduct',
                 cache: false,
                 type: 'POST',
                 contentType: 'application/json; charset=utf-8',
@@ -68,7 +68,7 @@
         if (confirm('Are you sure to Delete "' + Product.Name + '" product ??')) {           
             var id = Product.Id;
             $.ajax({
-                url: 'DeleteProduct/'+id,
+                url: 'admin/DeleteProduct/'+id,
                 cache: false,
                 type: 'POST',
                 contentType: 'application/json; charset=utf-8',
@@ -95,7 +95,7 @@
         var Product = self.Product();
 
         $.ajax({
-            url: 'EditProduct',
+            url: 'admin/EditProduct',
             cache: false,
             type: 'POST',
             contentType: 'application/json; charset=utf-8',

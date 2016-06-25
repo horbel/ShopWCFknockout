@@ -10,6 +10,7 @@ using DataLayer.Entities;
 
 namespace WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         //CRUD controller
